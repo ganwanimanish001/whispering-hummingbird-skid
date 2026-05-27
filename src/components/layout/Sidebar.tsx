@@ -10,7 +10,8 @@ import {
   BarChart3,
   Sparkles,
   Menu,
-  X
+  X,
+  Image as ImageIcon
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -24,6 +25,7 @@ const SidebarContent = ({ onClose }: { onClose?: () => void }) => {
     { icon: LayoutDashboard, label: 'Dashboard', path: '/' },
     { icon: Sparkles, label: 'AI Post Creator', path: '/posts' },
     { icon: MessageSquare, label: 'Review Assistant', path: '/reviews' },
+    { icon: ImageIcon, label: 'Media Manager', path: '/media' },
     { icon: Search, label: 'SEO Audit', path: '/seo' },
     { icon: BarChart3, label: 'Insights', path: '/insights' },
   ];

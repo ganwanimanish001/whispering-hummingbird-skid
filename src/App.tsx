@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Posts from "./pages/Posts";
 import Reviews from "./pages/Reviews";
+import Media from "./pages/Media";
 import SEO from "./pages/SEO";
 import Settings from "./pages/Settings";
 import Insights from "./pages/Insights";
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/posts" element={<Posts />} />
           <Route path="/reviews" element={<Reviews />} />
+          <Route path="/media" element={<Media />} />
           <Route path="/seo" element={<SEO />} />
           <Route path="/insights" element={<Insights />} />
           <Route path="/settings" element={<Settings />} />
