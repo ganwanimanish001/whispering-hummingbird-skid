@@ -1,13 +1,13 @@
 "use client";
 
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { 
   LayoutDashboard, 
   PenTool, 
   MessageSquare, 
   Search, 
-  Settings, 
+  Settings as SettingsIcon, 
   BarChart3,
   Sparkles
 } from 'lucide-react';
@@ -15,6 +15,7 @@ import { cn } from '@/lib/utils';
 
 const Sidebar = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   
   const menuItems = [
     { icon: LayoutDashboard, label: 'Dashboard', path: '/' },
@@ -58,8 +59,16 @@ const Sidebar = () => {
       </nav>
       
       <div className="p-4 border-t border-gray-50">
-        <button className="flex items-center gap-3 px-4 py-3 w-full text-gray-500 hover:bg-gray-50 rounded-xl transition-all">
-          <Settings size={20} />
+        <button 
+          onClick={() => navigate('/settings')}
+          className={cn(
+            "flex items-center gap-3 px-4 py-3 w-full rounded-xl transition-all",
+            location.pathname === '/settings' 
+              ? "bg-indigo-50 text-indigo-600" 
+              : "text-gray-500 hover:bg-gray-50 hover:text-gray-900"
+          )}
+        >
+          <SettingsIcon size={20} />
           <span className="font-medium">Settings</span>
         </button>
       </div>

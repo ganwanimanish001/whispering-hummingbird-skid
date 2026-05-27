@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Posts from "./pages/Posts";
 import Reviews from "./pages/Reviews";
 import SEO from "./pages/SEO";
+import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/posts" element={<Posts />} />
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/seo" element={<SEO />} />
+          <Route path="/settings" element={<Settings />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
